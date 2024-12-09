@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0a192f;
+  background-image: linear-gradient(
+    to bottom right,
+    #1a2a6c,
+    #b21f1f,
+    #fdbb2d
+  );
+  background-attachment: fixed;
+  color: #e6f1ff;
+}
+
+:root {
+  --primary-color: #fdbb2d;
+  --secondary-color: #64ffda;
+  --text-primary: #e6f1ff;
+  --text-secondary: #8892b0;
+  --bg-primary: #0a192f;
+  --bg-secondary: #172a45;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+::selection {
+  background-color: var(--primary-color);
+  color: var(--bg-primary);
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+  border-radius: 12px;
+}
