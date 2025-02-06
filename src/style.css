@@ -775,3 +775,119 @@ body {
 .fork-btn-inner::after {
   display: none !important;
 }
+
+/* Certification Style */
+
+.certifications-section {
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #d17a07, #1a2a6c);
+  border-radius: 15px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  white-space: nowrap; /* Prevent wrapping of child elements */
+  position: relative;
+}
+
+.certifications-section .section-title {
+  text-align: center;
+  color: #fdbb2d;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.certifications-section .cert-cards-wrapper {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scroll-behavior: smooth; /* Smooth scroll */
+  animation: scroll 20s linear infinite; /* Infinite scroll animation */
+}
+
+.certifications-section .cert-cards-container {
+  display: flex;
+  padding: 10px 0;
+}
+
+.certifications-section .cert-card {
+  display: inline-block;
+  margin-right: 20px; /* Add space between cards */
+}
+
+.certification-card-view {
+  background-color: #172a45;
+  color: #061426;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px; /* Fixed width for each card */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.certification-card-view:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.certification-card-view img {
+  border-radius: 10px;
+  max-height: 180px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.certification-card-view .card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fdbb2d;
+  margin-bottom: 10px;
+}
+
+.certification-card-view .card-subtitle {
+  color: #8892b0;
+  margin-bottom: 15px;
+}
+
+.certification-card-view .card-text {
+  font-size: 1rem;
+  color: #3b5e8b;
+  text-align: justify;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.certification-card-view .btn {
+  font-weight: bold;
+  padding: 8px 20px;
+  margin-top: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.certification-card-view .btn:hover {
+  background-color: #64ffda;
+  color: #0a192f;
+  transform: translateY(-3px);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); /* Move the entire content to the left */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .certifications-section {
+    padding: 30px 10px;
+  }
+
+  .certification-card-view {
+    max-width: 300px;
+  }
+
+  .certifications-section .section-title {
+    font-size: 2rem;
+  }
+}

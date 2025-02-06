@@ -4,9 +4,10 @@ import Navbar from "./components/Navbar";
 import Home2 from "./components/Home/Home2";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
-import Publications from "./components/Projects/Publications";
+import Publications from "./components/Publications/Publications";
+import Achievements from "./components/Achievements/Achievements"
 import Footer from "./components/Footer";
-import Resume from "./components/Resume/ResumeNew";
+// import Resume from "./components/Resume/ResumeNew";
 import {
   BrowserRouter as Router,
   Route,
@@ -39,8 +40,9 @@ function App() {
           <Route path="/" element={<Home2 />} />
           <Route path="/project" element={<Projects />} />
           <Route path="/about" element={<About />} />
-          <Route path="/resume" element={<Resume />} />
-          {/* <Route path="/publications" element={<Publications />} /> */}
+          <Route path="/achievements" element={<Achievements />} />
+          {/* <Route path="/resume" element={<Resume />} /> */}
+          <Route path="/publications" element={<Publications />} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
         <Footer />

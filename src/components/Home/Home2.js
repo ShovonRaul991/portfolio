@@ -1,7 +1,10 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import avatarImage from "../../Assets/AvatarProfilePicture - Copy.jpg";
+import avatarImage from "../../Assets/ShovonraulAvatarPhoto.jpg";
 import Type from "./Type";
+import pdf from "../../Assets/../Assets/Shovon-Raul-QR_Added_Resume.pdf";
+import { AiOutlineDownload } from "react-icons/ai";
+import Button from "react-bootstrap/Button";
 
 import Tilt from "react-parallax-tilt";
 import {
@@ -74,10 +77,21 @@ function Home2() {
           <Col md={4} className="myAvtar">
             <Tilt>
               <img src={avatarImage} className="img-fluid" alt="avatar" />
-              <h1 style={{ fontSize: "2.6em", color: "orange"}}>
+              <h1 style={{ fontSize: "2.6em", color: "White"}}>
               Shovon Raul
             </h1>
             </Tilt>
+            <Row style={{ justifyContent: "center", position: "relative" }}>
+              <Button
+                variant="primary"
+                href={pdf}
+                target="_blank"
+                style={{ maxWidth: "250px" }}
+              >
+                <AiOutlineDownload />
+                &nbsp;Download CV
+              </Button>
+            </Row>
 
           </Col>
         </Row>
