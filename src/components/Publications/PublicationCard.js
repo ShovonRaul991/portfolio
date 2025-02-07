@@ -6,7 +6,7 @@ import { BsBook, BsGlobe } from "react-icons/bs";
 function PublicationCard(props) {
   return (
     <Card className="publication-card-view">
-      <Card.Img variant="top" src={props.imgPath} alt="publication-img" />
+      {/* <Card.Img variant="top" src={props.imgPath} alt="publication-img" /> */}
       <Card.Body>
         <Card.Title>{props.title}</Card.Title>
         <Card.Subtitle className="mb-2 text-muted">

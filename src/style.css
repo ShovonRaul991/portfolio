@@ -776,20 +776,18 @@ body {
   display: none !important;
 }
 
-/* Certification Style */
-
+/* Certification Section */
 .certifications-section {
   padding: 50px 20px;
   background: linear-gradient(135deg, #d17a07, #1a2a6c);
   border-radius: 15px;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-  overflow-x: hidden; /* Hide horizontal scrollbar */
-  white-space: nowrap; /* Prevent wrapping of child elements */
   position: relative;
+  text-align: center;
 }
 
+/* Section Title */
 .certifications-section .section-title {
-  text-align: center;
   color: #fdbb2d;
   font-size: 2.5rem;
   font-weight: bold;
@@ -798,30 +796,39 @@ body {
   letter-spacing: 2px;
 }
 
-.certifications-section .cert-cards-wrapper {
+/* Wrapper & Container */
+.cert-cards-wrapper {
   display: flex;
-  overflow-x: auto; /* Enable horizontal scrolling */
-  scroll-behavior: smooth; /* Smooth scroll */
-  animation: scroll 20s linear infinite; /* Infinite scroll animation */
+  flex-direction: column; /* Ensure vertical stacking */
+  align-items: center;
+  overflow-x: auto; /* Hide horizontal scrolling */
+  overflow-y: auto; /* Enable vertical scrolling if needed */
 }
 
-.certifications-section .cert-cards-container {
+.cert-cards-container {
   display: flex;
-  padding: 10px 0;
+  flex-direction: row; /* One certificate per row */
+  width: 100%;
+  align-items: center;
 }
 
-.certifications-section .cert-card {
-  display: inline-block;
-  margin-right: 20px; /* Add space between cards */
+/* Certification Cards */
+.cert-card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* Space between each certificate */
 }
 
 .certification-card-view {
   background-color: #172a45;
-  color: #061426;
+  color: #e6f1ff;
   border-radius: 10px;
   padding: 20px;
-  width: 300px; /* Fixed width for each card */
+  width: 90%;
+  max-width: 500px; /* Set a maximum width */
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-align: center;
 }
 
 .certification-card-view:hover {
@@ -829,13 +836,16 @@ body {
   box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.15);
 }
 
+/* Image Styling */
 .certification-card-view img {
   border-radius: 10px;
   max-height: 180px;
   object-fit: cover;
   margin-bottom: 15px;
+  width: 100%;
 }
 
+/* Text Styling */
 .certification-card-view .card-title {
   font-size: 1.5rem;
   font-weight: bold;
@@ -850,44 +860,82 @@ body {
 
 .certification-card-view .card-text {
   font-size: 1rem;
-  color: #3b5e8b;
+  color: #a8b2d1;
   text-align: justify;
   line-height: 1.5;
   margin-bottom: 15px;
 }
 
+/* Button Styling */
 .certification-card-view .btn {
   font-weight: bold;
   padding: 8px 20px;
   margin-top: 10px;
+  border: none;
+  background-color: #fdbb2d;
+  color: #0a192f;
+  cursor: pointer;
   transition: all 0.3s ease-in-out;
+  border-radius: 5px;
 }
 
 .certification-card-view .btn:hover {
   background-color: #64ffda;
-  color: #0a192f;
   transform: translateY(-3px);
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%); /* Move the entire content to the left */
-  }
-}
-
+/* Responsive Design */
 @media screen and (max-width: 768px) {
   .certifications-section {
     padding: 30px 10px;
   }
 
   .certification-card-view {
-    max-width: 300px;
+    width: 95%;
   }
 
   .certifications-section .section-title {
     font-size: 2rem;
   }
+}
+
+/* Publications Section */
+
+.publications-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+  color: rgb(211, 51, 51);
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  color: #fdbb2d;
+}
+
+.project-heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.section-description {
+  font-size: 1rem;
+  color: rgba(244, 237, 237, 0.85);
+  margin-bottom: 40px;
+}
+
+.pub-card {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.pub-card:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease-in-out;
 }
