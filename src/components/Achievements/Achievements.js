@@ -1,11 +1,46 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import CertificationCard from "./CertificationCard";
+import BadgeCard from "./BadgeCard";
 import Particle from "../Particle";
+
+const badgeEmbeddings = [
+  `<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="6224a73c-0f2b-4204-9aa5-11480238d8da" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>`,
+  `<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="074cba13-3a2e-4832-9921-6ca331557016" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>`,
+  `<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="4ca37e97-b9dc-42c0-a84f-16298212ce93" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>`,
+  `<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="04e34dde-3197-4557-8e55-fd668dbb990d" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>`,
+  `<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="047ece1b-8045-47e3-b647-3b4db07946dd" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>`,
+  `<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="cfe9c0f8-bb78-406e-a9d5-e96ac9ac6a19" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>`,
+  `<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="8ce46a42-a7ed-44df-8989-c5d8487a5da4" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>`,
+  `<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="165a3f3c-c914-472f-8507-1d3a24989ace" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>`,
+  `<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="b59d3830-475d-4b55-98ae-9b5c45fba303" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>`,
+  `<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="7b2d861d-65ce-411f-9069-d2ad6ef47701" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>`,
+  `<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="562a5a6d-7d96-4a89-a65c-8f2e3fa9cc9c" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>`,
+  `<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="c2699b74-59d1-475c-8496-7eb8a5e594d3" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>`,
+  `<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="63fd1cd5-2f33-4610-b9d5-a4b6bc8b4344" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>`,
+  `<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="40577640-828c-48b8-aeda-3f4465bd4dca" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>`,
+  `<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="5d12e040-45fb-4353-8b1d-a5152837ed65" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>`,
+  `<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="f249b0ea-96f9-473f-bb4b-2317032531e0" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>`
+];
+
 
 function Achievements() {
   return (
     <Container fluid className="certifications-section">
+      <container>
+        <h2 className="section-title">Badges</h2>
+        <Particle />
+          <div className="badge-list">
+        <h2 className="section-title">Digital Badges</h2>
+        <Row className="badge-cards-container">
+          {badgeEmbeddings.map((embedCode, index) => (
+            <Col md={4} className="badge-card" key={index}>
+              <BadgeCard badgeEmbedCode={embedCode} />
+            </Col>
+          ))}
+        </Row>
+      </div>
+      </container>
       <br />
       <h2 className="section-title">Technical Certifications</h2>
       <Particle />
@@ -53,7 +88,7 @@ function Achievements() {
                 issuer="FutureSkills"
                 date="October 3rd, 2021"
                 description=" Gained Skills in Machine Learing Domain in Linear Regression"
-                certLink="https://drive.google.com/file/d/1RcLjHu9YocMfh5CojFU-Gikb_fG1Didj/view"
+                certLink="https://drive.google.com/file/d/13uRzwP9Y3jFHiwJ7rNxFwrU3PWpQs6oR/view?usp=drive_link"
               />
             </Col>
             <Col md={4} className="cert-card">
@@ -62,7 +97,7 @@ function Achievements() {
                 issuer="Andhra Pradesh STate Skill Development Corporation"
                 date="December 13, 2021"
                 description=" Gained Skills in AWS"
-                certLink="https://drive.google.com/file/d/13LcJ7iNBi3S9yGzgFIeeq3bJgDFCzW-k/view"
+                certLink="https://drive.google.com/file/d/13LcJ7iNBi3S9yGzgFIeeq3bJgDFCzW-k/view?usp=drive_link"
               />
             </Col>
             <Col md={4} className="cert-card">
@@ -71,7 +106,7 @@ function Achievements() {
                 issuer="Leaps Analyttica"
                 date="June 26, 2021"
                 description=" Gained Skills in Linear Regression in ML"
-                certLink="https://drive.google.com/drive/u/0/folders/1wC406SQbM-qwoLSgi9OoIIVuCFtlGAHR/view"
+                certLink="https://drive.google.com/file/d/163DZWzPdFN0oOgdRR5LgEGJdDJtA0_Tj/view?usp=drive_link"
               />
             </Col>
             <Col md={4} className="cert-card">
@@ -89,7 +124,7 @@ function Achievements() {
                 issuer="Microsoft"
                 date="November 27, 2020"
                 description=" Gained Skills in Python Basics"
-                certLink="https://drive.google.com/drive/u/0/folders/1wC406SQbM-qwoLSgi9OoIIVuCFtlGAHR/view"
+                certLink="https://drive.google.com/file/d/14TczuYNGKbGhYl03aleqB241vKExoYEa/view?usp=drive_link"
               />
             </Col>
             <Col md={4} className="cert-card">
@@ -98,7 +133,7 @@ function Achievements() {
                 issuer="NPTEL"
                 date="April , 2022"
                 description=" Gained Skills in Python Basics"
-                certLink="https://drive.google.com/drive/u/0/folders/1wC406SQbM-qwoLSgi9OoIIVuCFtlGAHR/view"
+                certLink="https://drive.google.com/file/d/16QtMqqpPkWfmIOwK1JnxcmIyWRPwJETu/view?usp=drive_link"
               />
             </Col>
             <Col md={4} className="cert-card">
@@ -107,7 +142,7 @@ function Achievements() {
                 issuer="Linkedin Learning"
                 date="May 17, 2023"
                 description=" Gained Skills in ASP.Net Dependency Injection"
-                certLink="https://drive.google.com/drive/u/0/folders/1wC406SQbM-qwoLSgi9OoIIVuCFtlGAHR/view"
+                certLink="https://drive.google.com/file/d/14B_HNGih9mOxpE5WkAhGWrCV6AtYlpkW/view?usp=drive_link"
               />
             </Col>
             <Col md={4} className="cert-card">
@@ -116,7 +151,7 @@ function Achievements() {
                 issuer="Linkedin Learning"
                 date="May 22, 2023"
                 description=" Gained Skills in ASP.Net Web API deployment"
-                certLink="https://drive.google.com/drive/u/0/folders/1wC406SQbM-qwoLSgi9OoIIVuCFtlGAHR/view"
+                certLink="https://drive.google.com/file/d/160e2kedFenjDwxc8oYDNIQj5OrJTAuuF/view?usp=drive_link"
               />
             </Col>
             <Col md={4} className="cert-card">
@@ -125,7 +160,7 @@ function Achievements() {
                 issuer="Linkedin Learning"
                 date="May 23, 2023"
                 description=" Gained Skills in Database and SQLs"
-                certLink="https://drive.google.com/drive/u/0/folders/1wC406SQbM-qwoLSgi9OoIIVuCFtlGAHR/view"
+                certLink="https://drive.google.com/file/d/15uxJszSLGbHv9r8S6ukqm25gee29rENA/view?usp=drive_link"
               />
             </Col>
             <Col md={4} className="cert-card">
@@ -134,7 +169,7 @@ function Achievements() {
                 issuer="Linkedin Learning"
                 date="May 22, 2023"
                 description="secret Json file and environment variables management in ASP.Net Web API"
-                certLink="https://drive.google.com/drive/u/0/folders/1wC406SQbM-qwoLSgi9OoIIVuCFtlGAHR/view"
+                certLink="https://drive.google.com/file/d/13OIO9NgV3mTTGcaa3mzs3ZXZ7Cnj96Ej/view?usp=drive_link"
               />
             </Col>
             <Col md={4} className="cert-card">

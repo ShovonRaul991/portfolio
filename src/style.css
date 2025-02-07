@@ -932,10 +932,58 @@ body {
 .pub-card {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
 }
 
 .pub-card:hover {
   transform: translateY(-5px);
   transition: all 0.3s ease-in-out;
+}
+
+
+/* badges */
+
+.badge-list {
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.section-title {
+  font-size: 1rem;
+  color: #fdbb2d;
+  margin-bottom: 0px;
+}
+
+
+
+.badge-card {
+  background: transparent;
+  padding: 0px;
+  border-radius: 0px;
+  box-shadow: none;
+  transition: transform 0.5s ease-in-out;
+  text-align: center;
+}
+
+
+
+.badge-card:hover {
+  transform: scale(1.05);
+}
+
+.badge-card div {
+  display:inline-flex;
+  flex-wrap: wrap;
+  flex-direction:unset;
+  align-items: center;
+  width: 40%;
+  margin: 5px;
+  transition: transform 0.6s;
+}
+
+.badge-card iframe {
+  width: 150px !important;
+  height: 270px !important;
+  border: none;
+  background: transparent;
 }

@@ -46,7 +46,7 @@ model which integrates Denoising Diffusion Probabilistic Models
 identify and segment fake portions within videos."
               journal="AIIOT- 2025"
               year="1st January, 2025"
-              paperLink="https://drive.google.com/drive/u/0/folders/1wC406SQbM-qwoLSgi9OoIIVuCFtlGAHR/view"
+              paperLink="https://drive.google.com/file/d/14Zl_Bhv-Gas8lOTvL1lGeWLqOKF8OFYO/view?usp=drive_link"
               journalLink=""
             />
           </Col>
