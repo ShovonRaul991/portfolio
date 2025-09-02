@@ -13,6 +13,7 @@ import {
   SiCsharp,
   SiDotnet,
   SiMysql,
+  SiUnity 
 } from "react-icons/si";
 
 function Techstack() {
@@ -33,21 +34,21 @@ function Techstack() {
       <Col xs={4} md={2} className="tech-icons">
         <SiDotnet />
       </Col>
-      <Col xs={4} md={2} className="tech-icons">
+      {/* <Col xs={4} md={2} className="tech-icons">
         <DiNodejs />
-      </Col>
+      </Col> */}
       <Col xs={4} md={2} className="tech-icons">
-        <DiReact />
+        <SiUnity />
       </Col>
-      <Col xs={4} md={2} className="tech-icons">
+      {/* <Col xs={4} md={2} className="tech-icons">
         <DiMongodb />
-      </Col>
+      </Col> */}
       <Col xs={4} md={2} className="tech-icons">
         <DiGit />
       </Col>
-      <Col xs={4} md={2} className="tech-icons">
+      {/* <Col xs={4} md={2} className="tech-icons">
         <SiMysql />
-      </Col>
+      </Col> */}
     </Row>
   );
 }

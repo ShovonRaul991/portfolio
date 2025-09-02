@@ -46,13 +46,13 @@ function Home2() {
               <br />
               <br />I am fluent in classics like
               <i>
-                <b className="purple"> Python, C++, C#, and Javascript. </b>
+                <b className="purple"> Python, C++, C#, and Javascript, Unity. </b>
               </i>
               <br />
               <br />
               My field of Interest's are building new &nbsp;
               <i>
-                <b className="purple">Web Technologies and Products </b> and
+                <b className="purple">Web Technologies and Games</b> and
                 also in areas related to{" "}
                 <b className="purple">
                   Machine Learing.
@@ -61,7 +61,7 @@ function Home2() {
               <br />
               <br />
               Whenever possible, I also apply my passion for developing products
-              with <b className="purple">Asp. Net</b> and
+              with <b className="purple">Asp. Net</b>, <b className="purple">Games in Unity</b> and
               <i>
                 <b className="purple">
                   {" "}
@@ -95,7 +95,7 @@ function Home2() {
 
           </Col>
         </Row>
-        <Row>
+        {/* <Row>
           <Col md={12} className="home-about-social">
             <h1>FIND ME ON</h1>
             <p>
@@ -144,7 +144,7 @@ function Home2() {
               </li>
             </ul>
           </Col>
-        </Row>
+        </Row> */}
       </Container>
     </Container>
   );

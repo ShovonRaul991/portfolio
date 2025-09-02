@@ -7,6 +7,7 @@ import ftpServer from "../../Assets/Projects/FtpServer.png";
 import wpChatAnalyser from "../../Assets/Projects/WhatsappChatAnalyser.png";
 import addressbook from "../../Assets/Projects/addressbook.jpg";
 import CorporateClassifieds from "../../Assets/Projects/MarketPlaceApi.jpg";
+import FlappyBirdGame from "../../Assets/Projects/flappy-bird.png";
 
 function Projects() {
   return (
@@ -20,6 +21,17 @@ function Projects() {
           Here are a few projects I've worked on.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={FlappyBirdGame}
+              isBlog={false}
+              title="Flappy Bird Game"
+              description="A clone of the popular Flappy Bird game built with Unity. This project showcases my skills in game development, including physics, collision detection, and user input handling."
+              ghLink="https://shovonraul991.itch.io/flappybird"
+              demoLink="https://shovonraul991.itch.io/flappybird"
+            />
+          </Col>
+
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={wpChatAnalyser}
