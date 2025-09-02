@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Container, Row, Col } from "react-bootstrap";
 import avatarImage from "../../Assets/ShovonraulAvatarPhoto.jpg";
 import Type from "./Type";
@@ -7,14 +7,7 @@ import { AiOutlineDownload } from "react-icons/ai";
 import Button from "react-bootstrap/Button";
 
 import Tilt from "react-parallax-tilt";
-import {
-  AiFillGithub,
-  AiOutlineTwitter,
-  AiFillInstagram,
-} from "react-icons/ai";
 
-
-import { FaLinkedinIn } from "react-icons/fa";
 
 function Home2() {
   return (
